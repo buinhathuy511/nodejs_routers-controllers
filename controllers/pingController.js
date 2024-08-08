@@ -1,8 +1,8 @@
-function handlePing(req, res) {
-    res.statusCode = 200;
-    res.setHeader('Content-Type', 'text/plan')
-    res.write('pong!');
-    res.end();
+function handlePing(request, response) {
+    response.statusCode = 200;
+    response.setHeader('Content-Type', 'text/plan')
+    response.write('pong!');
+    response.end();
 }
 
 module.exports = { handlePing }

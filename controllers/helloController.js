@@ -1,8 +1,8 @@
-function handleHelloWorld(req, res) {
-    res.statusCode = 200;
-    res.setHeader = ('Content-Type', 'text/plan');
-    res.write('Hello World');
-    res.end();
+function handleHelloWorld(request, response) {
+    response.statusCode = 200;
+    response.setHeader = ('Content-Type', 'text/plan');
+    response.write('Hello World');
+    response.end();
 }
 
 module.exports = { handleHelloWorld };

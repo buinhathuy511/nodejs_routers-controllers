@@ -1,27 +1,26 @@
 const { handlePing } = require('../controllers/pingController')
 const { handleHelloWorld } = require('../controllers/helloController')
+const { showNotFound } = require('../controllers/notFoundController')
+const { showMethodNotAllowed } = require('../controllers/methodNotAllowedController');
 
-function router(req, res) {
-    switch(req.url) {
+function router(request, response) {
+    switch(request.url) {
         case '/ping':
-            if (req.method === 'GET') {
-                handlePing(req, res);
+            if (request.method === 'GET') {
+                handlePing(request, response);
             } else {
-                res.writeHeader(405);
-                res.end('Method Not Allowed');
+                showMethodNotAllowed(request, response);
             }
             break;
         case '/':
-            if (req.method === 'GET') {
-                handleHelloWorld(req, res);
+            if (request.method === 'GET') {
+                handleHelloWorld(request, response);
             } else {
-                res.writeHeader(405);
-                res.end('Method Not Allowed');
+                showMethodNotAllowed(request, response);
             }
             break;
         default:
-            res.writeHeader(404);
-            res.end('Not Found');
+            showNotFound(request, response);
     }
 }
 
