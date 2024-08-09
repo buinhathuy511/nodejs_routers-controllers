@@ -1,5 +1,7 @@
+const { httpMethods, httpStatusCodes } = require('../constants');
+
 function showNotFound(request, response) {
-    response.writeHeader(404), { 'Content-Type' : 'text/plan' };
+    response.writeHeader(httpStatusCodes.NOT_FOUND), { 'Content-Type' : 'text/plan' };
     response.end('Not Found');
 }
 
