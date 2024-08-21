@@ -18,11 +18,6 @@ const routerMethods = {
         if (path === request.url && request.method === 'DELETE') {
             callback(request, response);
         }
-    },
-    patch: function(request, response, path, callback) {
-        if (path === request.url && request.method === 'PATCH') {
-            callback(request, response);
-        }
     }
 }
 
