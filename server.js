@@ -1,11 +1,11 @@
-const { createServer } = require('http');
-const router = require('./routers/router');
+const createServer = require('http').createServer;
+const router = require('./routers/appRouter');
 
-const hostname = '127.0.0.1';
+const hostname = 'localhost';
 const port = 6969;
 
 const server = createServer((request, response) => {
-    router.handleRouting(request, response);
+    router.run(request, response);
 });
 
 server.listen(port, hostname, () => {
