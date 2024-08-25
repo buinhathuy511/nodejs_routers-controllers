@@ -4,4 +4,14 @@ const httpStatusCodes = {
     METHOD_NOT_ALLOWED: 405,
 }
 
-module.exports = httpStatusCodes;
+const httpMethods = {
+    GET: 'GET',
+    POST: 'POST',
+    PUT: 'PUT',
+    DELETE: 'DELETE'
+}
+
+module.exports = {
+    httpStatusCodes,
+    httpMethods
+};

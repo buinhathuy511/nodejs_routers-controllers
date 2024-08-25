@@ -1,17 +1,6 @@
 routes = {
-    task: {
-        addTask: { 
-            value: "/add-task",
-        },
-        updateTask: { 
-            value: "/update-task",
-        },
-        getTask: { 
-            value: "/get-task",
-        },
-        deleteTask: { 
-            value: "/delete-task",
-        }
+    tasks: {
+        value: "/tasks"
     },
     user: {
         login: { 
