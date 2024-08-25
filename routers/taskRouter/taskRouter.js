@@ -9,6 +9,6 @@ const taskRouter = {
         routerMethods.put(request, response, routes.tasks.value, taskController.updateTask);
         routerMethods.delete(request, response, routes.tasks.value, taskController.deleteTask);
     }
-}
+};
 
 module.exports = taskRouter;

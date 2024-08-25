@@ -1,4 +1,4 @@
-routes = {
+const routes = {
     tasks: {
         value: "/tasks"
     },
