@@ -2,7 +2,7 @@ const createServer = require('http').createServer;
 const router = require('./routers/appRouter');
 
 const hostname = 'localhost';
-const port = 5000;
+const port = 7000;
 
 const server = createServer((request, response) => {
     router.run(request, response);

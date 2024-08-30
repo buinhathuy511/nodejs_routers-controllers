@@ -1,9 +1,7 @@
 const httpStatusCodes = require('../../constants').httpStatusCodes;
 
 function handleLogin (request, response) {
-    response.statusCode = httpStatusCodes.OK;
-    response.setHeader('Content-Type', 'text/plain');
-    response.write('Login Success!');
+    response.statusCode = httpStatusCodes.NO_CONTENT;
     response.end();
 }
 
